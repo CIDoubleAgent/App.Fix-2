@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>App.Fix</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  </head>
+  <body class="row grey darken-3">
+
+    <nav class="grey darken-4">
+      <div class="nav-wrapper">
+        <a id="title" class="cyan-text text-accent-3 brand-logo left" style="padding-left: 5px;">App.Fix()</a>
+      </div>
+    </nav>
+    <div class="row">
+      <ul id="nav-mobile" class="col s12 align-center">
+        {{#if session.user_id}}
+        <a href="/" class="btn waves-effect waves-light cyan-text text-accent-3 blue-grey darken-3">Home</a>
+        <a href="/dash" class="btn waves-effect waves-light cyan-text text-accent-3 blue-grey darken-3">Dashboard</a>
+        <a href="/post" class="btn waves-effect waves-light cyan-text text-accent-3 blue-grey darken-3">Create a Post</a>
+        <a href="/auth/logout" class="btn waves-effect waves-light cyan-text text-accent-3 blue-grey darken-3">Logout</a>
+        {{else}}
+        <a href="/auth/signup" class="btn waves-effect waves-light cyan-text text-accent-3 blue-grey darken-3">Sign Up</a>
+        <a href="/auth/login" class="btn waves-effect waves-light cyan-text text-accent-3 blue-grey darken-3">Login</a>
+        {{/if}}
+      </ul>
+    </div>
+
+    {{{ body }}}
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
+</html>

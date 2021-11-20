@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS appfix_db;
+CREATE DATABASE appfix_db;
